@@ -6,9 +6,8 @@ This project provides a ready-to-use Docker environment for Yocto Project builds
 - Based on Ubuntu 22.04
 - Non-root user (`yocto`) with password (`yocto`) inside the container
 - UTF-8 locale properly set
-- Workspace mounted to host machine to preserve build artifacts
+- Workspace mounted to host machine to preserve build artifacts. (`build`, `downloads`, `state-cache`)
 - Full automation with `run.ps1` (for Windows users), `setup-env.sh` (for other users)
-- Uses external mount drive for `build`, `downloads`, `state-cache`
 
 ## Prerequisites
 ### To run with Windows
@@ -36,11 +35,24 @@ This project provides a ready-to-use Docker environment for Yocto Project builds
         ```
 
     * for others
-        ``` bash
+        ```bash
         ./setup.env.sh
         ```
 
 3. Docker container will be up, running and ```poky``` will be downloaded as ```scarthgap``` branch, sourced environment.
+
+
+## Output
+
+- Windows 11
+    * `C:\\yocto\\builds`
+    * `C:\\yocto\\downloads`
+    * `C:\\yocto\\sstate-cache`
+- Others
+    * `/c/yocto/builds`
+    * `/c/yocto/downloads`
+    * `/c/yocto/sstate-cache`
+
 
 #
 ###### experimental
