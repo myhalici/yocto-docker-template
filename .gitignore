@@ -1,0 +1,35 @@
+# Build output and cache files
+builds/
+downloads/
+sstate-cache/
+
+# Poky and other Yocto sources
+poky/
+meta-*/
+bitbake/
+oe-core/
+documentation/
+
+# Temporary files created by the build process
+*.log
+*.tmp
+*.swp
+*.bak
+
+# Docker cache and image metadata
+*.tar
+*.tar.gz
+
+# VSCode or other editor files
+.vscode/
+.idea/
+
+# System files (Windows or macOS)
+.DS_Store
+Thumbs.db
+
+# Files that may be created during script execution
+conf/
+tmp/
+cache/
+``
