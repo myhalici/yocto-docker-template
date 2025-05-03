@@ -19,9 +19,6 @@ RUN useradd -m yocto && echo "yocto:yocto" | chpasswd && adduser yocto sudo
 # Working directory
 WORKDIR /home/yocto
 
-# Copy & Run the setup script to install repo and other dependencies
-COPY poky-setup.sh /home/yocto/poky-setup.sh
-
 # Change user
 USER yocto
 
